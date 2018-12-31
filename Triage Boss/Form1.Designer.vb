@@ -43,6 +43,8 @@ Partial Class frmMain
         Me.lblTCPC = New System.Windows.Forms.Label()
         Me.lblSendOut = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
+        Me.lblInsuranceSearch = New System.Windows.Forms.Label()
+        Me.lblClient = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -57,7 +59,7 @@ Partial Class frmMain
         '
         'txtInsurance
         '
-        Me.txtInsurance.Location = New System.Drawing.Point(397, 15)
+        Me.txtInsurance.Location = New System.Drawing.Point(359, 26)
         Me.txtInsurance.Name = "txtInsurance"
         Me.txtInsurance.Size = New System.Drawing.Size(100, 20)
         Me.txtInsurance.TabIndex = 3
@@ -65,7 +67,7 @@ Partial Class frmMain
         'cmbClient
         '
         Me.cmbClient.FormattingEnabled = True
-        Me.cmbClient.Location = New System.Drawing.Point(130, 14)
+        Me.cmbClient.Location = New System.Drawing.Point(142, 26)
         Me.cmbClient.Name = "cmbClient"
         Me.cmbClient.Size = New System.Drawing.Size(121, 21)
         Me.cmbClient.Sorted = True
@@ -102,6 +104,7 @@ Partial Class frmMain
         Me.lvwInsurance.AllowDrop = True
         Me.lvwInsurance.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1})
         Me.lvwInsurance.FullRowSelect = True
+        Me.lvwInsurance.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
         Me.lvwInsurance.Location = New System.Drawing.Point(9, 24)
         Me.lvwInsurance.MultiSelect = False
         Me.lvwInsurance.Name = "lvwInsurance"
@@ -122,6 +125,7 @@ Partial Class frmMain
         Me.lvwOther.AllowDrop = True
         Me.lvwOther.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader4})
         Me.lvwOther.FullRowSelect = True
+        Me.lvwOther.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
         Me.lvwOther.Location = New System.Drawing.Point(373, 244)
         Me.lvwOther.MultiSelect = False
         Me.lvwOther.Name = "lvwOther"
@@ -142,6 +146,7 @@ Partial Class frmMain
         Me.lvwGlobal.AllowDrop = True
         Me.lvwGlobal.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader2})
         Me.lvwGlobal.FullRowSelect = True
+        Me.lvwGlobal.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
         Me.lvwGlobal.Location = New System.Drawing.Point(191, 24)
         Me.lvwGlobal.MultiSelect = False
         Me.lvwGlobal.Name = "lvwGlobal"
@@ -163,6 +168,7 @@ Partial Class frmMain
         Me.lvwSendOut.AllowDrop = True
         Me.lvwSendOut.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader5})
         Me.lvwSendOut.FullRowSelect = True
+        Me.lvwSendOut.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
         Me.lvwSendOut.Location = New System.Drawing.Point(191, 244)
         Me.lvwSendOut.MultiSelect = False
         Me.lvwSendOut.Name = "lvwSendOut"
@@ -193,6 +199,7 @@ Partial Class frmMain
         Me.lvwTCPC.AllowDrop = True
         Me.lvwTCPC.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader3})
         Me.lvwTCPC.FullRowSelect = True
+        Me.lvwTCPC.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None
         Me.lvwTCPC.Location = New System.Drawing.Point(373, 24)
         Me.lvwTCPC.MultiSelect = False
         Me.lvwTCPC.Name = "lvwTCPC"
@@ -257,11 +264,33 @@ Partial Class frmMain
         Me.btnClear.Text = "Clear"
         Me.btnClear.UseVisualStyleBackColor = True
         '
+        'lblInsuranceSearch
+        '
+        Me.lblInsuranceSearch.AutoSize = True
+        Me.lblInsuranceSearch.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblInsuranceSearch.Location = New System.Drawing.Point(356, 12)
+        Me.lblInsuranceSearch.Name = "lblInsuranceSearch"
+        Me.lblInsuranceSearch.Size = New System.Drawing.Size(63, 13)
+        Me.lblInsuranceSearch.TabIndex = 56
+        Me.lblInsuranceSearch.Text = "Insurance"
+        '
+        'lblClient
+        '
+        Me.lblClient.AutoSize = True
+        Me.lblClient.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblClient.Location = New System.Drawing.Point(139, 12)
+        Me.lblClient.Name = "lblClient"
+        Me.lblClient.Size = New System.Drawing.Size(39, 13)
+        Me.lblClient.TabIndex = 57
+        Me.lblClient.Text = "Client"
+        '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(576, 542)
+        Me.Controls.Add(Me.lblClient)
+        Me.Controls.Add(Me.lblInsuranceSearch)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnSave)
@@ -297,4 +326,6 @@ Partial Class frmMain
     Friend WithEvents lblOther As Label
     Friend WithEvents lblTCPC As Label
     Friend WithEvents lblSendOut As Label
+    Friend WithEvents lblInsuranceSearch As Label
+    Friend WithEvents lblClient As Label
 End Class

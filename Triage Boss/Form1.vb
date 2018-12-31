@@ -268,6 +268,7 @@ Public Class frmMain
         lvwOther.Items.Clear()
         cmbClient.ResetText()
         txtInsurance.Text = ""
+        LoadInsuranceListBox()
     End Sub
 #End Region
 
